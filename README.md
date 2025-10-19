@@ -71,3 +71,7 @@ This trains the model on prepared data, evaluates performance, and saves it—wh
   `model.evaluate(...)`: Computes final val loss (0.377) and MAE (0.175)—off by ~0.18 crimes/cell, relative error ~30% vs. 2023 average 0.56/cell.
   `model.save('crime_prediction_model.h5')`: Stores for inference (e.g., load and predict on new data).
   This confirms no overfitting (val close to train) and provides a baseline. For improvement: Visualize predictions vs. actuals (heatmaps), add metrics like R², or retrain with more data for lower errors.
+
+  # Notes on the testing application
+
+  I added code that is used to demonstrate the model's capabilities. This code allows the user to select a week and it produces side by side heatmaps that show how accurate the model is. I have also added some samples of its output for reference. 
