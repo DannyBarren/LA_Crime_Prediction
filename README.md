@@ -12,10 +12,17 @@ This project represents a valuable and promising prototype for using AI and mach
 
 ## Summary of Results and Model Evaluation
 After running this model, it demonstrated that it is capable of predicting the location and concentration of crime in the future (up to one week) to a degree that is useful and relevant for decision making. This model demonstrated its viability as a valuable and promising prototype that is capable of being refined and improved to achieve higher degrees of accuracy. As the model currently stands in its present form, it was capable of predicting future crime counts per grid square with an average error of ±0.18 crimes per week. This model is capable of producing generally accurate future crime predictions over short-term periods of time (one week) and identifying future trends and crime concentrations to assist law enforcement with allocating resources in advance to assist in preventing violent crimes before they happen.
+
+<img width="1367" height="642" alt="sample_2" src="https://github.com/user-attachments/assets/31e76765-5f15-427b-a83c-fc6da415f26b" />
+
+
 The model's performance was evaluated using key regression metrics on validation data, yielding a Mean Absolute Error (MAE) of approximately 0.175 crimes per grid square, indicating predictions are typically off by about 0.18 crimes weekly relative to an average of 0.56 crimes per square in 2023 LA data, for a relative error of around 30-35%. The Mean Squared Error (MSE) of 0.377 and Root Mean Squared Error (RMSE) of roughly 0.61 further highlight its ability to minimize larger outliers while capturing spatial trends, with stronger relative accuracy (5-10% error) in high-crime hotspots. As a prototype, this demonstrates valuable potential for short-term crime forecasting and resource allocation in predictive policing, achieving benchmark-aligned hotspot identification rates of 50-70%, though refinement with updated 2024-2025 data, feature scaling, and advanced layers could enhance precision for real-world applications like preempting violent incidents.
 
 ## Code Explanation
 This README section provides a detailed breakdown of the code, explaining its structure, purpose, and key concepts section by section. The code is divided into three main parts as indicated by the comments in the script: building the neural network, loading and preparing data, and training/evaluating the model. I'll explain each in depth, including why certain choices were made, how layers and functions work, and tips for modification. This model uses TensorFlow/Keras for a multimodal 3D CNN to predict crime grids in LA based on historical crime and weather data.
+
+<img width="1302" height="827" alt="LA_heatmap" src="https://github.com/user-attachments/assets/947faa43-d94b-4923-b043-08e95682b745" />
+
 
 ### Section 1: Building the Neural Network
 This section imports libraries and defines the model's architecture using Keras' functional API, which supports complex models with multiple inputs (crime and weather data) and outputs (predicted crime grid). It's like designing a machine that processes two types of sequential "videos" (time-series grids) to forecast the next frame.
