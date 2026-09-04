@@ -1,5 +1,7 @@
 # LA Crime Prediction
 
+> Forecast next-week violent-crime counts on a 60×75 LA grid from crime history plus weather and holidays. Reported val MAE ≈ 0.18.
+
 A multimodal 3D CNN that forecasts next-week violent-crime counts on a 60×75 grid over Los Angeles. It takes two aligned inputs: 20 weeks of per-cell crime counts and 20 weeks of per-cell weather/holiday features (temperature, rain, is_holiday). Each branch is a stack of 3D convolutions; the branches are concatenated and mapped to 4,500 outputs, reshaped back to the 60×75 grid. Training and evaluation in this repo use 2023 weekly grids: 52 weeks, sliced into 32 sliding windows, split 80/20 by time.
 
 ## Results
